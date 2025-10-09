@@ -55,6 +55,10 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+function playGame() {
+    
+}
+
 let humanScore = 0;
 let computerScore = 0;
 
