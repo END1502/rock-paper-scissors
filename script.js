@@ -21,10 +21,10 @@ function playRound(humanChoice, computerChoice) {
             if (computerChoice == humanChoice) {
                 console.log("It's a tie");
             } else if (computerChoice == "paper") {
-                computerScore =+ 1;
+                computerScore += 1;
                 console.log("You lose");
             } else {
-                humanScore =+ 1;
+                humanScore += 1;
                 console.log("You win");
             }
             break;
@@ -33,10 +33,10 @@ function playRound(humanChoice, computerChoice) {
             if (computerChoice == humanChoice) {
                 console.log("It's a tie");
             } else if (computerChoice == "scissor") {
-                computerScore =+ 1;
+                computerScore += 1;
                 console.log("You lose");
             } else {
-                humanScore =+ 1;
+                humanScore += 1;
                 console.log("You win");
             }
             break;
@@ -45,10 +45,10 @@ function playRound(humanChoice, computerChoice) {
             if (computerChoice == humanChoice) {
                 console.log("It's a tie");
             } else if (computerChoice == "rock") {
-                computerScore =+ 1;
+                computerScore += 1;
                 console.log("You lose");
             } else {
-                humanScore =+ 1;
+                humanScore += 1;
                 console.log("You win");
             }
             break;
