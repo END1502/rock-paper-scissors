@@ -1,11 +1,11 @@
 function getComputerChoice() {
     let random = Math.floor(Math.random() * 3);
     if (random == 0){
-        console.log("rock");
+        return "rock";
     } else if (random == 1) {
-        console.log("paper");
+        return "paper";
     } else {
-        console.log("scissor");
+        return "scissor";
     }
 }
 getComputerChoice();
