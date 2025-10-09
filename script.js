@@ -8,11 +8,11 @@ function getComputerChoice() {
         return "scissor";
     }
 }
-getComputerChoice();
 
 function getHumanChoice() {
     let human = prompt ("Enter your choice");
-    console.log(human);
+    human = human.toLowerCase();
+    return human;
 }
 
 getHumanChoice();
