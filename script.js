@@ -15,7 +15,10 @@ function getHumanChoice() {
     return human;
 }
 
-getHumanChoice();
+function playRound(humanChoice, computerChoice) {
+    switch(humanChoice) {
+    }
+}
 
 let humanScore = 0;
 let computerScore = 0;
