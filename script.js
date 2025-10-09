@@ -29,6 +29,18 @@ function playRound(humanChoice, computerChoice) {
             }
             break;
 
+        case "paper" :
+            if (computerChoice == humanChoice) {
+                console.log("It's a tie");
+            } else if (computerChoice == "scissor") {
+                computerScore =+ 1;
+                console.log("You lose");
+            } else {
+                humanScore =+ 1;
+                console.log("You win");
+            }
+            break;
+
     }
 }
 
