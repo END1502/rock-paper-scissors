@@ -41,6 +41,17 @@ function playRound(humanChoice, computerChoice) {
             }
             break;
 
+        case "scissor" :
+            if (computerChoice == humanChoice) {
+                console.log("It's a tie");
+            } else if (computerChoice == "rock") {
+                computerScore =+ 1;
+                console.log("You lose");
+            } else {
+                humanScore =+ 1;
+                console.log("You win");
+            }
+            break;
     }
 }
 
