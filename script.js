@@ -17,6 +17,18 @@ function getHumanChoice() {
 
 function playRound(humanChoice, computerChoice) {
     switch(humanChoice) {
+        case "rock" :
+            if (computerChoice == humanChoice) {
+                console.log("It's a tie");
+            } else if (computerChoice == "paper") {
+                computerScore =+ 1;
+                console.log("You lose");
+            } else {
+                humanScore =+ 1;
+                console.log("You win");
+            }
+            break;
+
     }
 }
 
