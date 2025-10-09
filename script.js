@@ -1,5 +1,5 @@
-function getComputerChoice(max) {
-    let random = Math.floor(Math.random() * max);
+function getComputerChoice() {
+    let random = Math.floor(Math.random() * 3);
     if (random == 0){
         console.log("rock");
     } else if (random == 1) {
@@ -8,3 +8,11 @@ function getComputerChoice(max) {
         console.log("scissor");
     }
 }
+getComputerChoice();
+
+function getHumanChoice() {
+    let human = prompt ("Enter your choice");
+    console.log(human);
+}
+
+getHumanChoice();
