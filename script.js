@@ -71,7 +71,19 @@ function playGame() {
     };
 }
 
+function stateWinner() {
+    if (humanScore == computerScore) {
+        console.log("Nobody wins it's a tie");
+    } else if (humanScore > computerScore) {
+        console.log("Yay! You win the game");
+    } else {
+        console.log("Boo! You lose the game");
+    }
+}
+
 let humanScore = 0;
 let computerScore = 0;
 
 playGame();
+
+stateWinner();
