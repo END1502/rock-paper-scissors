@@ -66,8 +66,8 @@ function playGame() {
 
         playRound(humanSelection, computerSelection);
 
-        console.log("Your score: " + humanScore);
         console.log("Computer: " + computerScore);
+        console.log("Your score: " + humanScore);
     };
 }
 
@@ -77,7 +77,7 @@ function stateWinner() {
     } else if (humanScore > computerScore) {
         console.log("Yay! You win the game");
     } else {
-        console.log("Boo! You lose the game");
+        console.log("Boo! You lost the game");
     }
 }
 
