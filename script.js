@@ -1,5 +1,5 @@
 function getComputerChoice() {
-    let random = Math.floor(Math.random() * 3);
+    const random = Math.floor(Math.random() * 3);
     if (random == 0){
         return "rock";
     } else if (random == 1) {
@@ -9,10 +9,10 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
-    let human = prompt ("Enter your choice");
-    human = human.toLowerCase();
-    return human;
+function getHumanChoice(i) {
+        let human = prompt ("For round: " + i + "\nEnter your choice");
+        human = human.toLowerCase();
+        return human;
 }
 
 function playRound(humanChoice, computerChoice) {
@@ -56,11 +56,18 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-    for (let i = 1; i <= 5; i ++) {
-        
-        let computerSelection = getComputerChoice();
-        let humanSelection = getHumanChoice();
 
+    for (let i = 1; i <= round; i++) {
+        
+        const computerSelection = getComputerChoice();
+        const humanSelection = getHumanChoice(i);
+
+        if (humanSelection == "") {
+            i--;
+            continue;
+        }
+
+        console.log("Round: " + i);
         console.log ("The Computer picked: " + computerSelection);
         console.log ("You picked: " + humanSelection);
 
@@ -81,6 +88,7 @@ function stateWinner() {
     }
 }
 
+const round = 3;
 let humanScore = 0;
 let computerScore = 0;
 
