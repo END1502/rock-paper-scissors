@@ -1,4 +1,7 @@
-# rock-paper-scissors
+# Rock Paper Scissor
+
+![rock-paper-scissor](./rockpaperscissor.gif)
+
 This program is an odinproject activity
 
 Link: https://www.theodinproject.com/lessons/foundations-rock-paper-scissors
