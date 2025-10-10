@@ -1,8 +1,8 @@
 function getComputerChoice() {
     const random = Math.floor(Math.random() * 3);
-    if (random == 0) {
+    if (random === 0) {
         return "rock";
-    } else if (random == 1) {
+    } else if (random === 1) {
         return "paper";
     } else {
         return "scissor";
@@ -18,9 +18,9 @@ function getHumanChoice(i) {
 function playRound(humanChoice, computerChoice) {
     switch (humanChoice) {
         case "rock":
-            if (computerChoice == humanChoice) {
+            if (computerChoice === humanChoice) {
                 console.log("It's a tie");
-            } else if (computerChoice == "paper") {
+            } else if (computerChoice === "paper") {
                 computerScore += 1;
                 console.log("You lose");
             } else {
@@ -30,9 +30,9 @@ function playRound(humanChoice, computerChoice) {
             break;
 
         case "paper":
-            if (computerChoice == humanChoice) {
+            if (computerChoice === humanChoice) {
                 console.log("It's a tie");
-            } else if (computerChoice == "scissor") {
+            } else if (computerChoice === "scissor") {
                 computerScore += 1;
                 console.log("You lose");
             } else {
@@ -42,9 +42,9 @@ function playRound(humanChoice, computerChoice) {
             break;
 
         case "scissor":
-            if (computerChoice == humanChoice) {
+            if (computerChoice === humanChoice) {
                 console.log("It's a tie");
-            } else if (computerChoice == "rock") {
+            } else if (computerChoice === "rock") {
                 computerScore += 1;
                 console.log("You lose");
             } else {
@@ -62,7 +62,7 @@ function playGame() {
         const computerSelection = getComputerChoice();
         const humanSelection = getHumanChoice(i);
 
-        if (humanSelection == "") {
+        if (humanSelection === "") {
             i--;
             continue;
         }
@@ -79,7 +79,7 @@ function playGame() {
 }
 
 function stateWinner() {
-    if (humanScore == computerScore) {
+    if (humanScore === computerScore) {
         console.log("Nobody wins it's a tie");
     } else if (humanScore > computerScore) {
         console.log("Yay! You win the game");
