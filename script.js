@@ -9,12 +9,6 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice(i) {
-    let human = prompt("For round: " + i + "\nEnter your choice");
-    human = human.toLowerCase();
-    return human;
-}
-
 function playRound(humanChoice, computerChoice) {
     switch (humanChoice) {
         case "rock":
@@ -55,29 +49,6 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-function playGame() {
-
-    for (let i = 1; i <= round; i++) {
-
-        const computerSelection = getComputerChoice();
-        const humanSelection = getHumanChoice(i);
-
-        if (humanSelection === "") {
-            i--;
-            continue;
-        }
-
-        console.log("Round: " + i);
-        console.log("The Computer picked: " + computerSelection);
-        console.log("You picked: " + humanSelection);
-
-        playRound(humanSelection, computerSelection);
-
-        console.log("Computer: " + computerScore);
-        console.log("Your score: " + humanScore);
-    };
-}
-
 function stateWinner() {
     if (humanScore === computerScore) {
         console.log("Nobody wins it's a tie");
@@ -88,10 +59,16 @@ function stateWinner() {
     }
 }
 
-const round = 3;
+const buttons = document.querySelectorAll(".btn");
+buttons.forEach(choice => {
+    choice.addEventListener('click', (e) => {
+        console.log(e.target.id);
+        human = e.target.id;
+        playRound(human, getComputerChoice());
+    })
+})
+
 let humanScore = 0;
 let computerScore = 0;
-
-playGame();
 
 stateWinner();
