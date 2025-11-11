@@ -97,3 +97,7 @@ let computerScore = 0;
 const maxScore = 5;
 
 // STYLE
+buttons.forEach(choice => {
+    choice.setAttribute("style", "width: 250px; margin: 5px; border: solid; padding: 5px;");
+
+})
