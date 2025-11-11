@@ -72,7 +72,7 @@ function stateWinner() {
 }
 
 const score = document.createElement("p");
-const buttons = document.querySelectorAll(".btn");
+const buttons = document.querySelectorAll("div > .btn");
 buttons.forEach(choice => {
     choice.addEventListener('click', (e) => {
         human = e.target.id;
@@ -95,3 +95,5 @@ document.body.appendChild(result);
 let humanScore = 0;
 let computerScore = 0;
 const maxScore = 5;
+
+// STYLE
