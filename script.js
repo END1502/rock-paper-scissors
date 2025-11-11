@@ -58,6 +58,10 @@ buttons.forEach(choice => {
     choice.addEventListener('click', (e) => {
         human = e.target.id;
         playRound(human, getComputerChoice());
+        console.log(`Human: ${humanScore} :: Computer: ${computerScore}`);
+        if (humanScore === round || computerScore === round) {
+            stateWinner();
+        }
     })
 })
 
@@ -82,5 +86,4 @@ const tie = () => {
 
 let humanScore = 0;
 let computerScore = 0;
-
-stateWinner();
+const round = 3;
