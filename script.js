@@ -9,6 +9,20 @@ function getComputerChoice() {
     }
 }
 
+const win = () => {
+    humanScore += 1;
+    roundResult.textContent = "You win!";
+}
+
+const lose = () => {
+    computerScore += 1;
+    roundResult.textContent = "You lose!";
+}
+
+const tie = () => {
+    roundResult.textContent = "It's a tie!";
+}
+
 function playRound(humanChoice, computerChoice) {
     switch (humanChoice) {
         case "rock":
@@ -43,22 +57,27 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+const finalResult = document.createElement("p");
 function stateWinner() {
     if (humanScore === computerScore) {
-        console.log("Nobody wins it's a tie");
+        finalResult.textContent = "Nobody wins it's a tie";
     } else if (humanScore > computerScore) {
-        console.log("Yay! You win the game");
+        finalResult.textContent = "Yay! You win the game";
     } else {
-        console.log("Boo! You lost the game");
+        finalResult.textContent = "Boo! You lost the game";
     }
+
+    humanScore = 0;
+    computerScore = 0;
 }
 
+const score = document.createElement("p");
 const buttons = document.querySelectorAll(".btn");
 buttons.forEach(choice => {
     choice.addEventListener('click', (e) => {
         human = e.target.id;
         playRound(human, getComputerChoice());
-        console.log(`Human: ${humanScore} :: Computer: ${computerScore}`);
+        score.textContent = `Human: ${humanScore} :: Computer: ${computerScore}`
         if (humanScore === round || computerScore === round) {
             stateWinner();
         }
@@ -66,23 +85,12 @@ buttons.forEach(choice => {
 })
 
 const result = document.createElement("div");
-const roundResult = document.createElement("span");
+const roundResult = document.createElement("p");
 result.appendChild(roundResult);
+result.appendChild(score);
+result.appendChild(finalResult);
+
 document.body.appendChild(result);
-
-const win = () => {
-    humanScore += 1;
-    roundResult.textContent = "You win!";
-}
-
-const lose = () => {
-    computerScore += 1;
-    roundResult.textContent = "You lose!";
-}
-
-const tie = () => {
-    roundResult.textContent = "It's a tie!";
-}
 
 let humanScore = 0;
 let computerScore = 0;
