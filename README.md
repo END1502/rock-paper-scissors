@@ -1,6 +1,6 @@
 # Rock Paper Scissor
 
-![rock-paper-scissor](./rockpaperscissor.gif)
+![rock-paper-scissor](./images/rockpaperscissor.gif)
 
 This program is an odinproject activity
 
