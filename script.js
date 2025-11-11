@@ -71,7 +71,6 @@ function stateWinner() {
     computerScore = 0;
 }
 
-const score = document.createElement("p");
 const buttons = document.querySelectorAll("div > .btn");
 buttons.forEach(choice => {
     choice.addEventListener('click', (e) => {
@@ -84,17 +83,21 @@ buttons.forEach(choice => {
     })
 })
 
+let humanScore = 0;
+let computerScore = 0;
+const maxScore = 5;
+
 const result = document.createElement("div");
 const roundResult = document.createElement("p");
-result.appendChild(roundResult);
+const score = document.createElement("p");
+
+score.textContent = `Human: ${humanScore} :: Computer: ${computerScore}`
 result.appendChild(score);
+result.appendChild(roundResult);
 result.appendChild(finalResult);
 
 document.body.appendChild(result);
 
-let humanScore = 0;
-let computerScore = 0;
-const maxScore = 5;
 
 // STYLE
 buttons.forEach(choice => {
