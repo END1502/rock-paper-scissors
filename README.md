@@ -6,6 +6,8 @@ This program is an odinproject activity
 
 Link: https://www.theodinproject.com/lessons/foundations-rock-paper-scissors
 
+https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors#assignment
+
 This project was played through the browser's console
 
 It is now updated to be played with a UI
