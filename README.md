@@ -6,9 +6,12 @@ This program is an odinproject activity
 
 Link: https://www.theodinproject.com/lessons/foundations-rock-paper-scissors
 
-This project is played through the browser's console
+This project was played through the browser's console
+
+It is now updated to be played with a UI
 It is a simple game of rock, paper, scissor where your opponent is a computer
-It is only 3 rounds.
+
+The game ends when the maximum point is reached which is 5
 
 ## Installation
 1. Clone the repo
@@ -16,7 +19,6 @@ It is only 3 rounds.
    git clone https://github.com/END1502/rock-paper-scissors.git
    ```
 2. Open the index.html
-3. Open browser's console
 
 ## Built with
 * html
