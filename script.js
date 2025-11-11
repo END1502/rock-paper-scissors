@@ -78,7 +78,7 @@ buttons.forEach(choice => {
         human = e.target.id;
         playRound(human, getComputerChoice());
         score.textContent = `Human: ${humanScore} :: Computer: ${computerScore}`
-        if (humanScore === round || computerScore === round) {
+        if (humanScore === maxScore || computerScore === maxScore) {
             stateWinner();
         }
     })
@@ -94,4 +94,4 @@ document.body.appendChild(result);
 
 let humanScore = 0;
 let computerScore = 0;
-const round = 3;
+const maxScore = 5;
